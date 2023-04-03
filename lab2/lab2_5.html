@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-<meta charset="utf-8"> 
-<title>форма</title> 
-<style>
-  table {
-    width: 400px;
-    border: 0px solid rgb(42, 16, 99);
-    margin: 15px;
-    float:left
-  }
-  td, th {
-    border: 0px solid rgb(42, 16, 99);
-    padding: 5px;
-  }
-</style>
-</head> 
-<body> 
-     
-    <form> 
-        <table> 
-            <tbody> 
-    <tr><th><label for="name">E-mail</label></th> 
-        <th><input type="text" name="name" placeholder="ivanow07@mail.com" id="name" required></th> 
- <tr><th><label for="name">Пароль</label></th> 
-    <th><input type="text" name="name" placeholder="введите пароль" id="name" required></th></tr> 
-     
-    <tr><th>Пол</form></th><th><input type="radio" name="radio" checked> 
-    <label for="front">Мужчина</label> 
-    <input type="radio" name="radio"> 
-    <label for="back"> Женщина</label></th></tr> 
- 
-  <tr><th> <label for="date">Дата рождения: </label> </th><th> <input type="date"></th></tr> 
-       
-  <tr><th>Я знаю</th><th><input type="checkbox" checked> 
-        <label for="courses">Русский</label> 
-        <br> <input type="checkbox" checked> 
-       <label for="courses">Английский</label> 
-       <br> <input type="checkbox" checked> 
-        <label for="courses">Немецкий</label> 
-        <br> <input type="checkbox" checked> 
-        <label for="courses">Испанский</label> 
-        <br> <input type="checkbox" checked> 
-        <label for="courses">Французкий</label></th></tr>  
-  <tr><th><label for="message">обо мне</label></th><th> <textarea name="comment" placeholder="напишите коротко о себе" id="message"></textarea></th></tr> 
-  <tr><th><button type="submit">Отправить</button> </th></tr> 
-    
- 
-   
-    </tbody> </table>  </form> 
-     
-  </body> 
-  </html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Изображения</title>
+</head>
+<body>
+	<section class="center">
+		<h1>Изображения</h1>
+
+		<h2>Элемент <code>img</code></h2>
+
+		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
+
+		<h2>Альтернативный текст</h2>
+		<p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
+
+		<h2>Размеры изображения</h2>
+		<p>Атрибуты <code>width</code> и <code>height</code> задают размеры области изображения. Если оба атрибута не заданы, размер изображения будет определен после его полной загрузки, после чего размеры области будут изменены для размещения содержания картинки.
+		Если задан только один из атрибутов, второй размер будет высчитан в соответствие с пропорциями изображения и заданным атрибутом.
+		При указании обоих атрибутов ПА «впишет» изображение в область с указанными размерами.</p>
+		<p>Для добавления гибких (responsive) изображений (таких, 
+		которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками)
+		используют атрибуты <code>sizes</code> и  <code>srcset</code>.
+		Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы. 
+		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
+
+		</p>
+
+		<h2>Подпись к изображению</h2>
+		<p>Для группирования любых элементов, например, изображений и подписей к ним используется элемент <code>figure</code>.
+		Он не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться. 
+		Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
+		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
+
+		<h2>Элемент picture</h2>
+		<p>
+		HTML-элемент <code>picture</code> служит контейнером для одного или более элементов 
+		<code>source</code> и одного элемента <code>img</code> для обеспечения оптимальной версии изображения 
+		для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов  <code>source</code> 
+		и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>source</code> 
+		найдено не будет, то будет выбран файл, указанный  атрибутом  <code>src</code> элемента <code>img</code>. 
+		Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>. 
+		</p>
+	</section>
+	<img src="img/aquaria.jpg" alt="картиночка"><figure>aquaria</figure>
+	<img src="img/globus.gif" alt="картиночка"><figure>globus</figure>
+	<img src="img/html5-logo.png" alt="картиночка"><figure>html5-logo</figure>
+	<img src="img/html5-logo.svg" alt="картиночка"><figure>html5-logo.svg</figure>
+	<img src="img/light.gif" alt="картиночка"><figure>light</figure>
+	<img src="img/muscle.png" alt="картиночка"><figure>muscle.png</figure>
+	<img src="img/mushroom_landscape.jpg" alt="картиночка"><figure>aquaria</figure>
+	<img src="img/mushroom_portrait.jpg" alt="картиночка"><figure>aquaria</figure>
+	<img src="img/mushroom_retina.jpg" alt="картиночка"><figure>aquaria</figure>
+	<img src="img/mushroom.jpg" alt="картиночка"><figure>aquaria</figure>
+	<img src="img/redcat.jpg" alt="картиночка"><figure>redcat</figure>
+	<img src="img/slon.png" alt="картиночка"><figure>slon</figure>
+</body>
+</html>
